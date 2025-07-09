@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snack&Burgers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Snack&Burgers</h1>
+    <nav>
+      <a href="#menu">Меню</a>
+      <a href="#order">Замовити</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Найсмачніші бургери в місті!</h2>
+    <p>Швидко. Смачно. Доступно.</p>
+    <a href="#menu" class="btn">Дивитись меню</a>
+  </section>
+
+  <section id="menu">
+    <h2>Меню</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Класичний бургер</h3>
+        <p>Булка, котлета, сир, огірок, соус</p>
+        <span>99 грн</span>
+      </div>
+      <div class="item">
+        <h3>Чікен бургер</h3>
+        <p>Курка, салат, соус BBQ</p>
+        <span>109 грн</span>
+      </div>
+      <div class="item">
+        <h3>Картопля фрі</h3>
+        <p>Маленька / середня / велика</p>
+        <span>49 / 69 / 89 грн</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2>Замовити онлайн</h2>
+    <p>Залиште номер — ми зателефонуємо!</p>
+    <form id="order-form">
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <button type="submit">Замовити</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Контакти</h2>
+    <p>м. Львів, вул. Смакота 12</p>
+    <p>Пн-Нд: 10:00 - 22:00</p>
+    <p>Тел: +380 99 123 4567</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Snack&Burgers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffdf7;
+  color: #333;
+}
+
+header {
+  background: #ff6b00;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffe5b4;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6b00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 250px;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form input, form button {
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  max-width: 300px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+document.getElementById("order-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Дякуємо! Ми скоро зателефонуємо.");
+});
