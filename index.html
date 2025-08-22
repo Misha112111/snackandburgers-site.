@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snack&Burgers</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #fffbe6; color: #333; scroll-behavior: smooth; }
+  header { background: #ffd700; padding: 20px; text-align: center; position: relative; }
+  header img { height: 80px; }
+  nav { text-align: center; margin: 20px 0; }
+  nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+  nav a:hover { color: #e6b800; }
+  /* Мобільне меню */
+  .menu-toggle { display: none; position: absolute; top: 25px; right: 20px; cursor: pointer; font-size: 24px; }
+  .menu-toggle div { width: 30px; height: 4px; background-color: #333; margin: 6px 0; transition: 0.4s; }
+  .nav-links { display: flex; justify-content: center; flex-wrap: wrap; }
+  @media(max-width: 768px){
+    .nav-links { display: none; flex-direction: column; background: #ffd700; position: absolute; top: 100%; width: 100%; left: 0; text-align: center; }
+    .nav-links.show { display: flex; }
+    .menu-toggle { display: block; }
+    nav a { margin: 15px 0; font-size: 18px; }
+  }
+
+  section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+  h2 { color: #e6b800; text-align: center; margin-bottom: 30px; }
+  
+  .menu-item { display: flex; align-items: center; margin-bottom: 20px; background: #fff8c4; padding: 10px; border-radius: 10px; flex-wrap: wrap; }
+  .menu-item img {
+    width: 100%;       /* картинка займає всю ширину контейнера */
+    max-width: 300px;  /* максимальна ширина картинки */
+    height: auto;      /* висота підлаштовується пропорційно */
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  .menu-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width: 768px){ .menu-container { grid-template-columns: 1fr; } }
+
+  footer { background: #ffd700; padding: 20px; text-align: center; margin-top: 40px; }
+  iframe { width: 100%; height: 300px; border: none; margin-top: 20px; border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="снек.png" alt="Snack&Burgers">
+  <h1>Snack&Burgers</h1>
+  <p>Смачно. Швидко. Американсько!</p>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav>
+    <div class="nav-links">
+      <a href="#menu">Меню</a>
+      <a href="#about">Про нас</a>
+      <a href="#contacts">Контакти</a>
+    </div>
+  </nav>
+</header>
+
+<section id="menu">
+  <h2>Меню</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="бургери.jpg" alt="Бургери">
+      <div>
+        <h3>Бургери</h3>
+        <p>Соковиті бургери з м'ясом та  овочами</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="роли.jpg" alt="Роли в лаваші">
+      <div>
+        <h3>Роли</h3>
+        <p>Смачні роли з різними начинками</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="снеки.jpg" alt="Снеки">
+      <div>
+        <h3>Снеки</h3>
+        <p>Хрусткі снеки для швидкого перекусу</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="drinks.jpg" alt="Напої">
+      <div>
+        <h3>Напої</h3>
+        <p>Охолоджуючі  напої</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="icecream.jpg" alt="Морозиво">
+      <div>
+        <h3>Морозиво</h3>
+        <p>Смачне морозиво для дітей та дорослих</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Про нас</h2>
+  <p>Snack&Burgers – ваш швидкий шлях до справжньої американської кухні! У нас тільки свіжі продукти та смачні страви для будь-якого настрою. Ми цінуємо якість і швидке обслуговування, щоб ви завжди були задоволені.</p>
+</section>
+
+<section id="contacts">
+  <h2>Контакти</h2>
+  <p>Адреса: вул. Болгарска , 10, Львів</p>
+  <p>Телефон: +380983652912 </p>
+  <p>Email: info@snackburgers.ua</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.1234567890!2d30.123456!3d50.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c0a123456789%3A0xabcdef123456789!2sSnack%26Burgers!5e0!3m2!1suk!2sua!4v1690000000000!5m2!1suk!2sua" allowfullscreen></iframe>
+</section>
+
+<footer>
+  &copy; 2025 Snack&Burgers. Всі права захищені.
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
