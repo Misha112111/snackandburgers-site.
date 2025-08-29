@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snack&Burgers – Смачні бургери та снеки у Львові</title>
+<meta name="description" content="Snack&Burgers у Львові – смачні бургери, роли, снеки, морозиво та напої. Смачно, швидко, американсько!">
+<meta name="keywords" content="Snack&Burgers, бургери Львів, снеки, роли, морозиво, швидка їжа">
+<meta name="author" content="Snack&Burgers">
+<meta name="robots" content="index, follow">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background: #fffbe6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+header {
+  background: #ffd700;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+header img { height: 80px; }
+nav { text-align: center; margin: 20px 0; }
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+nav a:hover { color: #e6b800; }
+.menu-toggle { display: none; position: absolute; top: 25px; right: 20px; cursor: pointer; font-size: 24px; }
+.menu-toggle div { width: 30px; height: 4px; background-color: #333; margin: 6px 0; transition: 0.4s; }
+.nav-links { display: flex; justify-content: center; flex-wrap: wrap; }
+@media(max-width: 768px){
+  .nav-links { display: none; flex-direction: column; background: #ffd700; position: absolute; top: 100%; width: 100%; left: 0; text-align: center; }
+  .nav-links.show { display: flex; }
+  .menu-toggle { display: block; }
+  nav a { margin: 15px 0; font-size: 18px; }
+}
+
+section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+h2 { color: #e6b800; text-align: center; margin-bottom: 40px; font-size: 2em; }
+
+/* Меню */
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.menu-item {
+  background: linear-gradient(145deg, #fff8c4, #fff1a8);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff8c4;
+}
+
+/* Контакти і футер */
+footer {
+  background: #ffd700;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+iframe { width: 100%; height: 300px; border: none; margin-top: 20px; border-radius: 10px; }
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/snack.png" alt="Snack&Burgers">
+  <h1>Snack&Burgers</h1>
+  <p>Смачно. Швидко. Американсько!</p>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav>
+    <div class="nav-links">
+      <a href="#menu">Меню</a>
+      <a href="#about">Про нас</a>
+      <a href="#contacts">Контакти</a>
+    </div>
+  </nav>
+</header>
+
+<section id="menu">
+  <h2>Меню</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="images/burger.jpg" alt="Бургери">
+      <h3>Бургери</h3>
+      <p>Соковиті бургери з м'ясом та овочами</p>
+    </div>
+    <div class="menu-item">
+      <img src="images/rolls.jpg" alt="Роли">
+      <h3>Роли</h3>
+      <p>Смачні роли з різними начинками</p>
+    </div>
+    <div class="menu-item">
+      <img src="images/snacks.jpg" alt="Снеки">
+      <h3>Снеки</h3>
+      <p>Хрусткі снеки для швидкого перекусу</p>
+    </div>
+    <div class="menu-item">
+      <img src="images/drinks.jpg" alt="Напої">
+      <h3>Напої</h3>
+      <p>Охолоджуючі напої</p>
+    </div>
+    <div class="menu-item">
+      <img src="images/icecream.jpg" alt="Морозиво">
+      <h3>Морозиво</h3>
+      <p>Смачне морозиво для дітей та дорослих</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Про нас</h2>
+  <p>Snack&Burgers – ваш швидкий шлях до справжньої американської кухні! У нас тільки свіжі продукти та смачні страви для будь-якого настрою. Ми цінуємо якість і швидке обслуговування, щоб ви завжди були задоволені.</p>
+</section>
+
+<section id="contacts">
+  <h2>Контакти</h2>
+  <p>Адреса: вул. Болгарська, 10, Львів</p>
+  <p>Телефон: +380983652912</p>
+  <p>Email: info@snackburgers.ua</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!..."></iframe>
+</section>
+
+<footer>
+  <p>&copy; 2025 Snack&Burgers. Всі права захищені.</p>
+</footer>
+
+<script>
+function toggleMenu() { document.querySelector('.nav-links').classList.toggle('show'); }
+</script>
+
+</body>
+</html>
